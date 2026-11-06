@@ -36,7 +36,7 @@
 | Families | Different shopping needs | Flexible categories, shopping journal, personal goals |
 | Ethical brands | Unsupported or incorrect claims | Transparency notes; ethical status is clearly labelled as self-declared |
 | Retailers | Brands may be unfairly classified | Every estimate explains its basis; brand names in suggestions are examples only |
-| App developers | Wrong calculations or missing data | Input validation, modular code, 32 unit tests |
+| App developers | Wrong calculations or missing data | Input validation, modular code, 33 unit tests |
 | Environment-conscious organisations | Misleading environmental claims | Assumptions and limitations shown on screen and in the README |
 
 **User problems and our solutions**
@@ -113,7 +113,9 @@
 +----------------------------------------------------------------------------------+
 ```
 
-*(Add your hand-drawn or Canva wireframe photo to `docs/wireframe.png` as well, and reference it in the README.)*
+![Wireframes](wireframe.png)
+
+*A clean digital wireframe is in `docs/wireframe.png`. Add your own hand-drawn sketch photo as `docs/sketch.jpg` too.*
 
 **Mobile:** Streamlit stacks the columns vertically; the top navigation wraps onto two lines.
 
@@ -167,7 +169,7 @@ Python's `turtle` module draws in a desktop window and needs Tk, which a cloud s
 ## 8. Testing (Stage 4)
 
 ### 8.1 Automated tests
-`python -m unittest discover tests -v` runs 32 tests covering the formula, currency conversion, zero or negative prices, ethical-brand discount, swap savings, monthly totals, empty months, traffic-light status, every badge rule, impact levels, transparency notes, budget swaps (including when green costs more), month-on-month comparison, paused purchases, quick add and personal goals. **All 32 pass.**
+`python -m unittest discover tests -v` runs 33 tests covering the formula, currency conversion, zero or negative prices, ethical-brand discount, swap savings, monthly totals, empty months, traffic-light status, every badge rule, impact levels, transparency notes, budget swaps (including when green costs more), month-on-month comparison, paused purchases, quick add and personal goals. **All 33 pass.**
 
 ### 8.2 Manual test script: 15 purchases (cheap, expensive, eco, non-eco)
 Enter these in order (USD) and check the live preview matches the expected value before pressing *Log*.
@@ -202,13 +204,17 @@ Enter these in order (USD) and check the live preview matches the expected value
 
 *Tip: watch quietly while they use the app for two minutes without helping, and write down where they hesitate.*
 
-## 8b. Stakeholder survey (add your real results)
+## 8b. Stakeholder survey (Google Forms, 17 responses)
 
-| Question asked | Key finding | What I changed |
+| Question | Result | What I changed in kindcart. |
 |---|---|---|
-| (paste from your survey) | | |
+| Would you use an app that records purchases and shows a monthly summary? | 0 said No. 15 of 17 (88%) were positive (Yes 58.8%, Probably yes, Probably, Definitely); 2 were unsure | Kept purchase logging and the monthly summary as the core of the app |
+| Have you wanted a greener product but found it difficult? | 76.5% (13 of 17) said Yes; the rest said Maybe or Once or twice; nobody said No | Simple defaults (Quick Add, typical prices), plain-language Impact Explained, and a "You're not alone" card on the Home screen |
+| What do you consider before buying? | Price 82.4% and quality 82.4%; reviews 47.1%; availability 35.3%; packaging, recommendations, ethical claims and environmental impact 17.6% each | Every greener swap shows its estimated cost and a **"Keep the quality" tip**; the Log page shows the best swap within your price |
+| How confident are you at recognising a responsible product or brand? | Average 3.35 out of 5 (9 of 17 chose 4 or 5, 5 chose 3, 3 chose 1 or 2) | **Transparency Notes** ("Why this number?") label every figure as an estimate and show the formula |
+| How would you prefer the app to encourage you? (15 responses) | Suggestions that fit my budget 40%; friendly tips without judgement 26.7%; short facts and learning cards 20%; the remaining two respondents 6.7% each. Badges and progress charts were not chosen | Made budget-fit swaps and no-guilt messages the most prominent features, added eco facts; badges and goals stay as optional extras rather than the main motivator |
 
-*Summarise your survey in 3 to 5 rows: the question, the headline result (for example "68% said green products feel too expensive"), and the feature or wording you changed because of it.*
+**Survey limitations:** small (17 people), self-selected, and likely friends and classmates, so the results show direction, not proof. This is also why the app calls its numbers "illustrative".
 
 ## 9. Ethical reflection
 

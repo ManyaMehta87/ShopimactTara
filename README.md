@@ -3,18 +3,21 @@
 > **Shop mindfully. Grow gently.**
 > At the shelf, a price tag shows one number. The planet's number is missing. **kindcart.** adds a second price tag, the estimated CO₂, *before* you pay, and a friendly sprout named **Pip** helps you choose greener, without guilt.
 
-**🔗 Live app:** `PASTE YOUR STREAMLIT CLOUD LINK HERE`
+**🔗 Live app:** https://v35bzt6njakdkzyypbiwaz.streamlit.app/
 
 | | |
 |---|---|
-| **Student** | `Your full name` |
-| **Candidate registration number** | `Your registration number` |
+| **Student** | Manya Dhwaneet Mehta |
+| **Candidate registration number** | 100670 |
+| **Student ID (SID)** | 2013146 |
 | **CRS** | Artificial Intelligence |
 | **Course** | Python Programming (Summative Assessment, Scenario 1) |
-| **School** | `Your school name` |
+| **School** | Udgam School for Children (IBCP) |
 
 ![kindcart home screen](docs/screenshot-home.png)
-*(Add screenshots to `docs/`: home, log a purchase with the impact decoder, impact dashboard, achievements with garden, a turtle drawing.)*
+*(Add your screenshots to `docs/`: home, log a purchase, impact dashboard, achievements with garden, a turtle drawing.)*
+
+**Wireframes:** see [`docs/wireframe.png`](docs/wireframe.png).
 
 ---
 
@@ -64,6 +67,7 @@ Pip has four emotional states that change with what you do:
 - **Green Within My Budget**: estimated cost of each swap and a "fits your budget" flag (green can cost more, and the app says so)
 - **Before You Buy**: a gentle pause; paused purchases count as CO₂ avoided and earn *Mindful Pause*
 - **Quick Add**: typical prices as defaults and one-tap re-log of recent items
+- **Survey-driven**: a "Keep the quality" tip on every swap, the best swap within your price shown while logging, and a "You're not alone" card (76.5% of 17 surveyed shoppers found greener choices hard)
 - **Shopping Journal** with notes, **Monthly Progress** versus last month, **Personal Eco Goals**
 - **Virtual garden**: every badge you earn grows a plant
 - Eco fact of the day, quotes, **high-contrast mode**, currency selector, CSV import/export, demo data
@@ -86,7 +90,7 @@ CO2e (kg) = price x (currency -> USD rate) x product multiplier   [x 0.85 if eth
 | `mascot.py` | Loads Pip's four images and builds Pip's live web component (HTML, CSS, JavaScript) |
 | `turtle_art.py` | Turtle-style SVG engine and the eco drawings |
 | `assets/` | `pip_before.png`, `pip_learning.png`, `pip_excited.png`, `pip_goal.png`, `logo.png` |
-| `tests/test_engine.py` | 32 unit tests |
+| `tests/test_engine.py` | 33 unit tests |
 | `.streamlit/config.toml` | Colour theme |
 | `requirements.txt` | `streamlit`, `pandas` |
 
@@ -119,7 +123,7 @@ python -m unittest discover tests -v
 
 ## 9. Testing and feedback
 
-32 automated tests (all passing), a 15-purchase manual script, a stakeholder survey summary and a user-feedback log are documented in [`docs/DESIGN.md`](docs/DESIGN.md).
+33 automated tests (all passing), a 15-purchase manual script, a stakeholder survey analysis (17 responses) and a user-feedback log are documented in [`docs/DESIGN.md`](docs/DESIGN.md).
 
 ## 10. Ethics and limitations
 
